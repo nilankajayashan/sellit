@@ -1,0 +1,57 @@
+<?php $ad_info = isset($ad)?json_decode(json_encode($ad->ad_info)):null; ?>
+
+
+<script defer>
+
+</script>
+
+valueAdder('make', "{{ isset($ad_info->make)?$ad_info->make:'' }}");
+
+
+//check box
+let features=['4-Wheel Drive','Alarm','ABS','Driver Airbag','Electronic Stability Program (ESP)','Immobiliser','Passenger Airbag','Rear seat belts','Safety Belt Pretensioners','Safety Belt Pretensioners','Side Airbags','Xenon headlightss','Alloy Wheels','Catalytic Converter','Rear Spoiler','Tow Bar','Tuning','Air Conditioning','Auxiliary heating','Climate Control','Cruise Control','Electric heated seats','Leather Seats','Parking Sensors','Power-assisted Steering (PAS)','Power Locks','Power Seats','Power Windows','Sunroof','Tilt Steering Wheel','AM/FM Stereo','Cassette Player','CD Multichanger','CD Player','Navigation System','Premium Sound System'];
+let value_list = "{{ $ad_info->features }}".split(',');
+for(let index in features) {
+    let id = document.getElementById(features[index]);
+    for(let inner_index in value_list){
+        if(value_list[inner_index] === id.value){
+            id.checked = true;
+        }
+    }
+}
+
+
+<script defer>
+    valueAdder('make', "{{ isset($ad_info->make)?$ad_info->make:'' }}");
+    valueAdder('model', "{{ isset($ad_info->model)?$ad_info->model:'' }}");
+    valueAdder('year', "{{ isset($ad_info->year)?$ad_info->year:'' }}");
+    valueAdder('fuel', "{{ isset($ad_info->fuel)?$ad_info->fuel:'' }}");
+    valueAdder('condition', "{{ isset($ad_info->condition)?$ad_info->condition:'' }}");
+    valueAdder('type', "{{ isset($ad_info->type)?$ad_info->type:'' }}");
+
+</script>
+
+
+<script defer>
+    valueAdder('make', "{{ isset($ad_info->make)?$ad_info->make:'' }}");
+    valueAdder('model_option', "{{ isset($ad_info->model)?$ad_info->model:'' }}");
+    valueAdder('body_style', "{{ isset($ad_info->body_style)?$ad_info->body_style:'' }}");
+    valueAdder('year', "{{ isset($ad_info->year)?$ad_info->year:'' }}");
+    valueAdder('mileage', "{{ isset($ad_info->mileage)?$ad_info->mileage:'' }}");
+    valueAdder('transmission', "{{ isset($ad_info->transmission)?$ad_info->transmission:'' }}");
+    valueAdder('fuel', "{{ isset($ad_info->fuel)?$ad_info->fuel:'' }}");
+    valueAdder('doors', "{{ isset($ad_info->doors)?$ad_info->doors:'' }}");
+    valueAdder('color', "{{ isset($ad_info->color)?$ad_info->color:'' }}");
+    valueAdder('condition', "{{ isset($ad_info->condition)?$ad_info->condition:'' }}");
+    //check box
+    let features=['4-Wheel Drive','Alarm','ABS','Driver Airbag','Electronic Stability Program (ESP)','Immobiliser','Passenger Airbag','Rear seat belts','Safety Belt Pretensioners','Safety Belt Pretensioners','Side Airbags','Xenon headlightss','Alloy Wheels','Catalytic Converter','Rear Spoiler','Tow Bar','Tuning','Air Conditioning','Auxiliary heating','Climate Control','Cruise Control','Electric heated seats','Leather Seats','Parking Sensors','Power-assisted Steering (PAS)','Power Locks','Power Seats','Power Windows','Sunroof','Tilt Steering Wheel','AM/FM Stereo','Cassette Player','CD Multichanger','CD Player','Navigation System','Premium Sound System'];
+    let value_list = "{{ $ad_info->features }}".split(',');
+    for(let index in features) {
+        let id = document.getElementById(features[index]);
+        for(let inner_index in value_list){
+            if(value_list[inner_index] === id.value){
+                id.checked = true;
+            }
+        }
+    }
+</script>

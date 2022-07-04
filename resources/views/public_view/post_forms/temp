@@ -1,0 +1,39 @@
+<div class="mb-3 col-lg-6">
+    <h6>Ads</h6>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="view_ads" name="view_ads" id="view_ads" onchange="removeOptions('view_ads',['add_ads','edit_ads','delete_ads','approve_ads','reject_ads'])">
+        <label class="form-check-label" for="view_ads">
+            View Ads
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="add_ads" name="add_ads" id="add_ads" onchange="setRequired('view_ads','add_ads',['add_ads','edit_ads','delete_ads','approve_ads','reject_ads'])">
+        <label class="form-check-label" for="add_ads">
+            Add Ads
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="edit_ads" name="edit_ads" id="edit_ads" onchange="setRequired('view_ads','edit_ads',['add_ads','edit_ads','delete_ads','approve_ads','reject_ads'])">
+        <label class="form-check-label" for="edit_edit">
+            Edit Ads
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="delete_ads" name="delete_ads" id="delete_ads" onchange="setRequired('view_ads','delete_ads',['add_ads','edit_ads','delete_ads','approve_ads','reject_ads'])">
+        <label class="form-check-label" for="delete_ads">
+            Delete Ads
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="reject_ads" name="reject_ads" id="reject_ads" onchange="setRequired('view_ads','reject_ads',['add_ads','edit_ads','delete_ads','approve_ads','reject_ads'])">
+        <label class="form-check-label" for="reject_ads">
+            Reject Ads
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="approve_ads" name="approve_ads" id="approve_ads" onchange="setRequired('view_ads','approve_ads',['add_ads','edit_ads','delete_ads','approve_ads','reject_ads'])">
+        <label class="form-check-label" for="approve_ads">
+            Approve Ads
+        </label>
+    </div>
+</div>
